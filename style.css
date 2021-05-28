@@ -28,10 +28,24 @@ section {
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.host-list {
+  margin-bottom: 30px;
+}
+
+.host-title {
+  display: flex;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 /* ---  Groups & Items --- */
@@ -62,6 +76,16 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+header nav ul {
+  display: flex;
 }
 
 header nav ul li {
@@ -104,6 +128,13 @@ form button {
   width: 100%;
 }
 
+.spaced {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +148,69 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  header .logo {
+    margin: 14px 0;
+    padding-top: 0;
+  }
+
+  header nav {
+    margin-top: 8px;
+  }
+
+  #menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .spaced {
+    flex-direction: column;
+  }
+
+  form button {
+    width: 180px;
+  }
+
+  main img {
+    margin-bottom: 0;
+  }
+
+  .row-align {
+    display: flex;
+  }
+
+  .vertically-centered {
+    align-items: center;
+  }
+
+  .grid2x2 {
+    flex-wrap: wrap;
+  }
+
+  .grid-align {
+    display: flex;
+    flex-basis: calc(50% - 40px);
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .host-list {
+    margin-bottom: 0;
+  }
+
+  .host-title {
+    padding: 0;
+  }
+}
