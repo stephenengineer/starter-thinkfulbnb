@@ -74,7 +74,7 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 60px;
   color: #fff;
 }
 
@@ -153,6 +153,18 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+/* Without this media query, the logo and form fields cannot fit on Galaxy Fold screens */
+@media all and (max-width: 300px) {
+  .logo {
+    font-size: 50px;
+  }
+
+  form select,
+  form input {
+    width: 140px;
+  }
+}
+
 @media all and (min-width: 480px) {
   header {
     display: flex;
@@ -160,9 +172,10 @@ footer p {
     padding: 0 30px;
   }
 
-  header .logo {
+  .logo {
     margin: 14px 0;
     padding-top: 0;
+    font-size: 72px;
   }
 
   header nav {
